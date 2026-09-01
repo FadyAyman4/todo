@@ -5,7 +5,10 @@ import TodoDetails from "./pages/TodoDetails";
 
 function App() {
 	const [todos, setTodos] = useState([]);
-const [theme, setTheme] = useState("light");
+const [theme, setTheme] = useState(() => {
+  const storedTheme = localStorage.getItem("theme");
+  return storedTheme ? storedTheme : "light";
+});
 const [isLoaded, setIsLoaded] = useState(false);
 
 useEffect(() => {
@@ -24,7 +27,9 @@ useEffect(() => {
 
 
 
-
+useEffect(() => {
+  localStorage.setItem('theme', theme);
+}, [theme]);
 
 
 	const handleAddTodo = (text , description) => {
