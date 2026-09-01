@@ -1,70 +1,145 @@
-# Getting Started with Create React App
+# Todo App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple and modern task management app built with React. It helps users organize daily tasks, mark them complete, search through them, and switch between light and dark themes.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Add new todos with a title and description
+- Mark tasks as complete or incomplete
+- Delete tasks you no longer need
+- Search todos in real time
+- View detailed information for each task
+- Toggle between light and dark theme
+- Save todos locally using browser storage
+- Responsive UI for desktop and smaller screens
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React
+- React Router
+- Bootstrap
+- React Bootstrap
+- JavaScript
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project Structure
 
-### `npm test`
+```bash
+todo/
+├── public/
+│   ├── index.html
+│   ├── manifest.json
+│   ├── robots.txt
+│   └── ...
+├── src/
+│   ├── components/
+│   │   ├── AddTodoForm.js
+│   │   ├── SearchBar.js
+│   │   ├── Stats.js
+│   │   ├── ThemeToggle.js
+│   │   ├── TodoList.js
+│   │   └── TodoListItem.js
+│   ├── pages/
+│   │   ├── Home.js
+│   │   └── TodoDetails.js
+│   ├── App.js
+│   ├── index.css
+│   ├── index.js
+│   └── ...
+├── package.json
+├── README.md
+└── .gitignore
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Demo
 
-### `npm run build`
+This project is a personal productivity app with a clean, user-friendly interface. It is suited for managing small to medium task lists and can be extended with features like editing tasks, categories, deadlines, or a backend API.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Make sure you have the following installed on your machine:
 
-### `npm run eject`
+- Node.js
+- npm
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Installation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone the repository:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. Navigate to the project folder:
 
-## Learn More
+```bash
+cd todo
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. Install dependencies:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm install
+```
 
-### Code Splitting
+4. Start the development server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm start
+```
 
-### Analyzing the Bundle Size
+The app will run in your browser at:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```text
+http://localhost:3000
+```
 
-### Making a Progressive Web App
+## Production Build
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+To create a production-ready build:
 
-### Advanced Configuration
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This generates the optimized output in the `build` folder.
 
-### Deployment
+## Pushing to GitHub
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+If you want to publish this project on GitHub, use the following commands:
 
-### `npm run build` fails to minify
+```bash
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin https://github.com/your-username/your-repo-name.git
+git push -u origin main
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If the repository already exists and you just want to connect it:
+
+```bash
+git remote add origin https://github.com/your-username/your-repo-name.git
+git push -u origin main
+```
+
+## Future Improvements
+
+Possible upgrades for this app include:
+
+- Edit existing todo items
+- Add due dates and priorities
+- Save data to a backend database
+- Add user authentication
+- Drag-and-drop task organization
+- Export/import todo data
+
+## Author
+
+This project was created as a frontend todo application for learning and practical use.
+
+## Notes
+
+Todos are stored in the browser using `localStorage`, so they remain available after refresh unless the storage is cleared.
