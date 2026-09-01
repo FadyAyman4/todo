@@ -55,7 +55,7 @@ useEffect(() => {
 	};
 
 	return (
-		<BrowserRouter>
+		<BrowserRouter basename="/todo">
 			<div className={`App ${theme === "dark" ? "dark-theme" : ""}`}>
 				<Routes>
 					<Route
